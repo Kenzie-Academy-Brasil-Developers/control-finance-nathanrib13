@@ -8,12 +8,57 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <meta name="description" content="Control Finance - Seu controle financeiro">
     <link rel="stylesheet" href="/styles/globalStyles.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href= "/styles/mobile-style.css">
+    <link rel="stylesheet" href= "/styles/desktop-style.css">
+    <link rel="stylesheet" href="/styles/modal-style-mobile.css">
+    <link rel="stylesheet" href="/styles/modal-style-desktop.css">
+    
 </head>
 <body>
-    <main id="app"></main>
+
+<header>
+    <div class="header-container">
+    <div class="logo-name">
+        <p class="control">Control </p>
+        <p class="finance"> Finance </p> 
+    </div>
+    <button class="add-value"> Registrar novo valor</button>
+    </div>
+</header>
+<main id="app" class="container">
+<section class="financial-resum">
+    <h2>Resumo financeiro</h2>
+    <ul class="filter-buttons">
+        <li>
+            <button class="all-button filter-item">Todos</button>
+        </li>
+        <li>
+            <button class="entry-button filter-item">Entradas</button>
+        </li>
+        <li>
+            <button class="exit-button filter-item">Saidas</button>
+        </li>
+    </ul>
+</section>
+<div class="values-sum">
+    <p>Soma dos valores</p>
+    
+</div>
+<section class="transacitons-historic">
+    <ul class="historic-list">
+ 
+    </ul>
+
+</section>
+</main>
+
+
+    
+    
+    <script src="/scripts/valuesData.js"></script>
     <script src="/scripts/modal.js"></script>
-    <script src="valuesData.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
+
+

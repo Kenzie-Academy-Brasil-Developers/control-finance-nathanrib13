@@ -1,0 +1,115 @@
+header{
+    background-color: var(--color-grey-5);
+    height: 132px;
+    padding: 28px 16px;
+    margin-left: 0;
+    margin: 0 auto;
+}
+
+.header-container{
+    align-content: center;
+    justify-content: center;
+}
+.logo-name{
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.control{
+    color: var(--color-brand-1);
+}
+.finance{
+    color: var(--color-grey-1);
+}
+
+.add-value{
+    background-color: var(--color-brand-1);
+    color: var(--color-mode) ;
+    width: 343px;
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+}
+.add-value:hover{
+    cursor: pointer;
+}
+.financial-resum{
+    margin: 28px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 261px;
+    height: 89px;
+    justify-content: space-between;
+}
+.financial-resum > h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.filter-buttons{
+    display: flex; 
+    gap: 10px
+    
+}
+
+.filter-buttons > li > button{
+    border: 1px solid var(--color-grey-5);
+    padding: 7.5px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: var(--color-mode);
+}
+.filter-buttons > li > button:hover{
+    cursor: pointer;
+}
+
+.values-sum {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 16px;
+    font-weight: 500;
+    border-radius:8px;
+    background-color: var(--color-grey-4);
+}
+
+
+.historic-list > li {
+    padding: 8px 16px;
+    margin: 20px 0px;
+    border: 1px solid var(--color-grey-5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+
+.historic-list > li > div {
+    display: flex;
+    gap: 32px;
+}
+
+.flux-category {
+    background-color: var(--color-grey-4);
+    padding: 7px 14px;
+    border-radius: 4px;
+}
+
+.value-insert{
+    font-weight: 500;
+    color: var(--color-grey-1);
+}
+
+.historic-list > li > div> button{
+   padding:  6px;
+}
+
+.trash:hover{
+cursor: pointer;
+}

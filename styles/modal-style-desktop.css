@@ -1,0 +1,49 @@
+@media(min-width: 900px){ 
+
+    .modal-container{
+        width: 428px;
+        padding: 24px;
+        height: 350px;
+        border-radius: 8px ;
+       
+    }       
+    .insert-value>input{
+        width: 380px;
+    }
+
+    .insert-value-type{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin-top: -15px;
+        gap: 16px;
+    }
+    
+    
+    .insert-value-type >div{
+        display: flex;
+        flex-direction: row;
+        padding-top: 15px ;
+    }
+    .insert-value-type >div >button{
+     padding: 0px 15px;
+    }
+    
+    .choose-option{
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+
+    .cancel-modal{
+        width: 89px;
+        height: 31px;
+    }
+    .insert-value-button{
+        width: 109px;
+        height: 31px;
+    
+    }
+            
+            
+}
