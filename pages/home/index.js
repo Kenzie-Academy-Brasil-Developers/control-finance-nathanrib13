@@ -3,10 +3,12 @@
 function creatingLiValues (listToRender){
     const form = document.querySelector(".form-modal")
     const valueslist = document.querySelector(".historic-list")
-
-
+    
     form.addEventListener("submit", (event) => { 
     valueslist.innerText = ""
+
+ 
+        
     listToRender.forEach(event => {
     const ulValuesInserted = document.querySelector(".historic-list")
     const lista = document.createElement("li")
@@ -20,6 +22,7 @@ function creatingLiValues (listToRender){
     typeEntry.classList.add("flux-category")
     buttonTrash.classList.add("button")
     
+
     valueIserted.innerHTML = `R$${event.value}`
     if(event.categoryID === 1){
     typeEntry.innerText = "Entrada"
@@ -32,10 +35,12 @@ function creatingLiValues (listToRender){
                 buttonTrash.addEventListener("click", (event) =>{
                         
                         const idToRemove = event.target.id
-                        let index = idToRemove-1
+                        let index = idToRemove
                         insertedValues.splice(index, 1)
                         lista.remove()
                         somaTotal(insertedValues)
+                        verificaStatus()
+
 
                     })
 
@@ -49,7 +54,7 @@ function creatingLiValues (listToRender){
     return ulValuesInserted
     })
 
-
+    
 
 somaTotal(insertedValues)
 })
@@ -85,36 +90,26 @@ function somaTotal (insertedValues){
     return valuesSum
 }
 
+function verificaStatus(){ 
+const valueslist = document.querySelector(".historic-list")
+if(valueslist.children.length == 0){
+    const divTexts = document.createElement('div')
+    const pText = document.createElement('p')
+    const pText2 = document.createElement('p')
+
+    pText.classList.add("ptext-1")
+    pText2.classList.add("ptext-2")
+    divTexts.classList.add("nodata-div")
+
+    pText.innerText = "Nenhum valor cadastrado"
+    pText2.innerText = "Registre um novo valor"
+
+    divTexts.append(pText, pText2)
+    valueslist.append(divTexts)
+
+}
+}
+
+verificaStatus()
 
 
-
-
-
-
- function filterCategorys () {
-     const filtersButtons = document.querySelectorAll(".filter-item")
-     const historicLi = document.querySelector(".historic-list")
-
-     console.log(filtersButtons)
-
-     filtersButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            historicLi.innerText = ""
-            const filters = button.innerText
-            if(filters === "Todos") {
-                renderLiFilter(insertedValues)
-            } else if (filters == "Entradas"){ 
-            const exitsFilter = insertedValues.filter(values => insertedValues.categoryID ===2)
-            renderLiFilter(exitsFilter)
-            }else { 
-            const entrysFilter = insertedValues.filter(values => insertedValues.categoryID ===1)
-            renderLiFilter(entrysFilter)
-        }
-        })
-     })
-
- }
-
- filterCategorys()
-
- 

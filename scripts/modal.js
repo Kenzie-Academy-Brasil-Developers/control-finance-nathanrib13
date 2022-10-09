@@ -30,6 +30,7 @@ function showUpModal(){
     modalDescription.classList.add("modal-description")
     form.classList.add("form-modal")
     insertValueDiv.classList.add("insert-value")
+    inputValue.classList.add("input-value")
     typeOfValue.classList.add("insert-value-type")
     inputEntryType.classList.add("entry-input")
     labelEntry.classList.add("label-1")
